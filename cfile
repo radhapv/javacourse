@@ -1,0 +1,46 @@
+#include<iostream>
+using namespace std;
+
+class timing
+{   
+    float h1,m1,s1;
+    public:
+    
+    void sethour(float h)
+    {
+        h1=h;
+    }
+      void setmin(float m)
+    {
+        m1=m;
+    }
+      void setsecond(float s)
+    {
+        s1=s;
+    }
+    float calch2s()
+    {
+        return h1*60*60;
+    }
+      float calcm2s()
+    {
+        return m1*60;
+    }
+    
+};
+int main()
+{
+    timing t;
+    float hour,min,second,result;
+    cout<<"Enter the number of hours:";
+    cin>>hour;
+     cout<<"Enter the number of minutes:";
+    cin>>min;
+     cout<<"Enter the number of seconds:";
+    cin>>second;
+    t.sethour(hour);
+    t.setmin(min);
+    t.setsecond(second);
+    result=second+t.calch2s()+t.calcm2s();
+    cout<<"The total time in seconds is:" <<result;
+}
